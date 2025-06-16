@@ -11,11 +11,12 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background: #fefefe;
+      background: linear-gradient(#87ceeb,#e0ffff);
       font-family: 'Rock Salt', cursive;
     }
 
     .hero {
+      z-index: 2;
       position: relative;
       width: 100vw;
       height: 100vh;
@@ -66,9 +67,28 @@
       --poster-color: transparent;
       pointer-events: auto;
     }
+    .clouds {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background: url("https://www.transparenttextures.com/patterns/clouds.png") repeat-x;
+      background-size: cover;
+      animation: moveclouds 60s linear infinite;
+      opacity: 0.6;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes moveclouds {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
   </style>
 </head>
 <body>
+    <div class="clouds"></div>
   <div class="hero">
     <div class="logo-text">RICHARD<br>KAULI!</div>
 
