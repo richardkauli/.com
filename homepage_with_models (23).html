@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richard Kauli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #fefefe;
+      font-family: 'Rock Salt', cursive;
+    }
+
+    .hero {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .logo-text {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1;
+      font-weight: bold;
+      text-align: center;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .buttons {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: clamp(1rem, 5vw, 4rem);
+      z-index: 3;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-family: 'Rock Salt', cursive;
+      color: black;
+      padding: 0.5rem 1.5rem;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .buttons a:hover {
+      background: black;
+      color: white;
+    }
+
+    model-viewer {
+      position: absolute;
+      width: 26vw;
+      height: 26vw;
+      --poster-color: transparent;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="logo-text">RICHARD<br>KAULI!</div>
+
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/reflective-sphere.gltf" alt="Sphere" auto-rotate camera-controls interaction-prompt="none" style="top: calc(10% - 10%); left: calc(10% - 10%);"></model-viewer>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="Astronaut" auto-rotate camera-controls interaction-prompt="none" style="top: calc(70% - 10%); left: calc(40% - 10%);"></model-viewer>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" alt="Neil Armstrong" auto-rotate camera-controls interaction-prompt="none" style="top: calc(10% - 10%); left: calc(70% - 10%);"></model-viewer>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/BarramundiFish.mixed.glb" alt="Fish" auto-rotate camera-controls interaction-prompt="none" style="top: calc(65% - 10%); left: calc(70% - 10%); width: 32.5vw; height: 32.5vw;"></model-viewer>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/DamagedHelmet/glTF/DamagedHelmet.gltf" alt="Helmet" auto-rotate camera-controls interaction-prompt="none" style="top: calc(5% - 10%); left: calc(43% - 10%);"></model-viewer>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/BoomBox/glTF-Draco/BoomBox.gltf" alt="BoomBox" auto-rotate camera-controls interaction-prompt="none" style="top: calc(70% - 10%); left: calc(10% - 10%);"></model-viewer>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/coffeemat.glb" alt="Coffeemat" auto-rotate camera-controls interaction-prompt="none" style="top: calc(35% - 10%); left: calc(0% - 10%);"></model-viewer>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/ToyCar/glTF-Binary/ToyCar.glb" alt="Toy Car" auto-rotate camera-controls interaction-prompt="none" style="top: calc(35% - 10%); left: calc(20% - 10%);"></model-viewer>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb" alt="Robot" auto-rotate camera-controls interaction-prompt="none" style="top: calc(35% - 10%); left: calc(85% - 10%);"></model-viewer>
+
+    <div class="buttons">
+      <a href="#shop">SHOP</a>
+      <a href="#info">INFO</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </div>
+</body>
+</html>
