@@ -11,8 +11,30 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background: #fefefe;
+      background: linear-gradient(#87CEEB, #B0E0E6);
       font-family: 'Rock Salt', cursive;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat;
+      opacity: 0.5;
+      animation: moveClouds 60s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes moveClouds {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     .hero {
