@@ -33,30 +33,13 @@
       position: relative;
     }
 
-    .model-panel {
-      height: calc(100vh - 180px);
+    
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .button-panel {
-      position: fixed;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-family: 'ArialBlackCustom', Arial, sans-serif;
-      font-size: 32px;
-      font-weight: normal;
-      color: #000;
-      gap: 0.25rem;
-      padding: 0.5rem 1rem 1.25rem 1rem;
-      z-index: 10;
-    }
+    
 
     .button-panel div:hover {
       color: red;
@@ -90,23 +73,7 @@
         flex-direction: column;
       }
 
-      .model-panel {
-        flex: 2.5;
-        padding-bottom: 0.5rem;
-      }
-
-      .button-panel {
-        position: static;
-        transform: none;
-        left: auto;
-        font-size: 32px;
-        padding: 1rem;
-        gap: 0.25rem;
-      }
-
-      .instagram-icon img {
-        width: 28px;
-        height: 28px;
+      
       }
     }
   
@@ -129,6 +96,81 @@
 }
 .instagram-icon:hover {
   background-color: red;
+}
+
+
+/* Top two-thirds for 3D model */
+
+}
+/* Bottom one-third for buttons */
+
+/* Scale button text based on bottom panel height */
+.button-panel div, .button-panel a {
+  font-size:  6vh !important;
+}
+/* Instagram icon scales with text */
+.button-panel .instagram-icon {
+  width: 1.1em !important;
+  height: 1.1em !important;
+}
+
+
+/* Force smaller button text to prevent clipping */
+.button-panel div, .button-panel a {
+  font-size:  6vh !important;
+  line-height: 1 !important;
+}
+
+
+/* Enforce 3D model top 70% of viewport at all sizes */
+.hero, .model-panel {
+  height: 70vh !important;
+}
+model-viewer {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* Button panel bottom 30% */
+
+
+
+/* Button panel styling reset */
+.button-panel {
+  padding-bottom: 1rem !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 30vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:  0.3rem !important;
+  font-family: 'ArialBlackCustom', Arial, sans-serif;
+  color: #000;
+  z-index: 10;
+}
+/* Scale text */
+.button-panel div, .button-panel a {
+  font-size:  6vh !important;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+/* Instagram icon styling */
+.button-panel .instagram-icon {
+  width: 1.1em !important;
+  height: 1.1em !important;
+  margin-top: 0;
+}
+
+
+/* Hover effect: buttons turn red */
+.button-panel div:hover,
+.button-panel a:hover {
+  color: red !important;
 }
 </style>
 <link href="https://richardkauli.github.io/favicon.png" rel="icon" type="image/webp"/></head>
