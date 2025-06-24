@@ -65,13 +65,10 @@
   color: black;
   text-decoration: underline;
   margin: 0.5em 0 0 0;
-  padding: 0 0 0 1rem;
+  padding: 0;
   display: inline-block;
   text-align: left;
   font-family: Courier, monospace;
-
-  margin-left: 0;
-  padding-left: 0;
 }
 
     .bottom-nav {
@@ -140,7 +137,7 @@
 
 
 .bottom-nav button {
-  padding: 0 0 0 1rem;
+  padding: 0;
   margin: 0 auto;
   outline: none;
   transition: color 0.3s ease;
@@ -148,7 +145,7 @@
 .bottom-nav button:hover {
   color: red !important;
   background: none !important;
-  padding: 0 0 0 1rem;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -164,13 +161,10 @@
   text-decoration: none;
   display: block;
   width: 100%;
-  padding: 0 0 0 1rem;
+  padding: 0;
   margin: 0.5em 0 0.25em 0;
   box-sizing: border-box;
   transition: background-color 0.3s ease, color 0.3s ease;
-
-  margin-left: 0;
-  padding-left: 0;
 }
 .project-button:hover {
   color: darkgrey !important;
@@ -411,7 +405,7 @@ body.menu-open .mobile-menu-overlay {
   width: auto;
 
   list-style: none;
-  padding: 0 0 0 1rem;
+  padding: 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -420,13 +414,11 @@ body.menu-open .mobile-menu-overlay {
   height: 100%;
 
 }
-.mobile-menu-overlay li {
-  margin: 1rem 0;
-}
+.mobile-menu-overlay li { margin: 1rem 0; }
 .mobile-menu-overlay a {
   text-decoration: none;
-  font-family: 'Arial Black', Arial, sans-serif;
-  font-size: 3rem;
+  font-family: 'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 2rem;
   color: black;
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -447,6 +439,15 @@ body.menu-open .mobile-menu-overlay {
 .mobile-menu-overlay .instagram-icon:hover {
   background-color: red;
   transform: scale(1.1);
+}
+
+
+/* Make Instagram logo smaller on mobile overlay */
+@media (max-width: 768px) {
+  .mobile-menu-overlay .instagram-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
 }
 </style>
 </head>
