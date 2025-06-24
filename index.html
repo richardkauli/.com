@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Richard Kauli</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Richard Kauli</title>
+<script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" type="module"></script>
+<style>
     @font-face {
       font-family: 'ArialBlackCustom';
       src: url('https://richardkauli.github.io/arial_black.ttf') format('truetype');
@@ -109,30 +110,23 @@
       }
     }
   </style>
-</head>
+<link href="https://richardkauli.github.io/favicon.png" rel="icon" type="image/webp"/></head>
 <body>
-  <div class="container">
-    <div class="model-panel">
-      <model-viewer 
-        id="viewer"
-        src="https://richardkauli.github.io/HELLO1.glb" 
-        alt="Hello Model" 
-        auto-rotate rotation-per-second="45deg" auto-rotate-delay="0" camera-controls autoplay interaction-prompt="none"
-        camera-orbit="0deg 90deg 70%" 
-        field-of-view="20deg">
-      </model-viewer>
-    </div>
-    <div class="button-panel">
-      <div>PORTFOLIO</div>
-      <div>ABOUT</div>
-      <div>CONTACT</div>
-      <a href="https://www.instagram.com/richard.kauli" target="_blank" class="instagram-icon">
-        <img src="https://richardkauli.github.io/IG_LOGO.png" alt="Instagram">
-      </a>
-    </div>
-  </div>
-
-  <script>
+<div class="container">
+<div class="model-panel">
+<model-viewer alt="Hello Model" auto-rotate="" auto-rotate-delay="0" autoplay="" camera-controls="" camera-orbit="0deg 90deg 70%" field-of-view="20deg" id="viewer" interaction-prompt="none" rotation-per-second="45deg" src="https://richardkauli.github.io/HELLO1.glb">
+</model-viewer>
+</div>
+<div class="button-panel">
+<div>PORTFOLIO</div>
+<div>ABOUT</div>
+<div>CONTACT</div>
+<a class="instagram-icon" href="https://www.instagram.com/richard.kauli" target="_blank">
+<img alt="Instagram" src="https://richardkauli.github.io/IG_LOGO.png"/>
+</a>
+</div>
+</div>
+<script>
     const viewer = document.getElementById('viewer');
     
     if (window.innerWidth <= 768) {
