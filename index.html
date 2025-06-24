@@ -109,7 +109,28 @@
         height: 28px;
       }
     }
-  </style>
+  
+.button-panel a {
+  transition: transform 0.2s ease;
+}
+.button-panel a:hover {
+  transform: scale(1.1);
+}
+
+
+
+.instagram-icon {
+  width: 28px;
+  height: 28px;
+  background-color: #000;
+  mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
+  -webkit-mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
+  display: inline-block;
+}
+.instagram-icon:hover {
+  background-color: red;
+}
+</style>
 <link href="https://richardkauli.github.io/favicon.png" rel="icon" type="image/webp"/></head>
 <body>
 <div class="container">
@@ -118,12 +139,10 @@
 </model-viewer>
 </div>
 <div class="button-panel">
-<a href="portfolio.html" style="text-decoration: none; color: inherit;"><div>PORTFOLIO</div></a>
+<a href="portfolio/" style="text-decoration: none; color: inherit;"><div>PORTFOLIO</div></a>
 <a href="about.html" style="text-decoration: none; color: inherit;"><div>ABOUT</div></a>
 <a href="contact.html" style="text-decoration: none; color: inherit;"><div>CONTACT</div></a>
-<a class="instagram-icon" href="https://www.instagram.com/richard.kauli" target="_blank">
-<img alt="Instagram" src="https://richardkauli.github.io/IG_LOGO.png"/>
-</a>
+<a class="instagram-icon" href="https://www.instagram.com/richard.kauli" target="_blank"></a>
 </div>
 </div>
 <script>
