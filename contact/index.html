@@ -691,5 +691,25 @@ body.menu-open .hamburger span:nth-child(3) {
 document.getElementById('hamburger').addEventListener('click', function() {
   document.body.classList.toggle('menu-open');
 });
-</script></body>
+</script>
+<script>
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  const button = this.querySelector('button');
+  button.disabled = true;
+  button.textContent = 'Sending...';
+});
+</script>
+
+
+<script>
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+  const button = this.querySelector('button');
+  button.disabled = true;
+  button.textContent = 'Sending...';
+  button.style.color = 'white';
+  button.style.backgroundColor = 'red';
+});
+</script>
+
+</body>
 </html>
