@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head><link href="https://richardkauli.github.io/favicon.png" rel="icon" type="image/png"/>
+<script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" type="module"></script>
+<meta charset="utf-8"/>
+<title>Richard Kauli - Portfolio</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+@font-face {
+  font-family: 'ArialBlackCustom';
+  src: url('../arial_black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Courier, monospace;
+      background-color: white;
+    }
+
+    .product-grid {
+      display: grid;
+      gap: 2vw;
+      padding: 4vw;
+      justify-items: center;
+    
+  padding-bottom: 100px; }
+
+    .product {
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .model-container {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: #eee;
+      display: block;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 0.5em;
+      text-align: left;
+    }
+
+    .description {
+      font-size: 1em;
+      margin-top: 0.5em;
+      text-align: left;
+    }
+
+    .read-more {
+  font-size: 1em;
+  color: black;
+  text-decoration: underline;
+  margin: 0.5em 0 0 0;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+  font-family: Courier, monospace;
+}
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 1.5em 0;
+    }
+
+    .bottom-nav button {
+      font-family: Arial Black, Arial, sans-serif;
+      background: none;
+      border: none;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    
+
+
+}
+
+}
+
+}
+
+}
+
+}
+
+    }
+
+    @media screen and (max-width: 600px) {
+      .product {
+        width: 90vw;
+        margin: 0 auto;
+      }
+
+      .bottom-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+      }
+    }
+  
+.bottom-nav button:hover,
+
+
+
+
+
+
+.bottom-menu:hover {
+  color: red !important;
+  background-color: transparent !important;
+}
+
+
+.bottom-nav button:hover {
+  color: red !important;
+  background-color: transparent !important;
+}
+
+
+.bottom-nav button {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  transition: color 0.3s ease;
+}
+.bottom-nav button:hover {
+  color: red !important;
+  background: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.project-button {
+  all: unset;
+  cursor: pointer;
+  font-family: Courier, monospace;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0.5em 0 0.25em 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.project-button:hover {
+  color: darkgrey !important;
+  background: none !important;
+}
+
+
+
+.read-more:hover {
+  background-color: red;
+  color: white;
+}
+
+
+.bottom-nav button {
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+.bottom-nav button:hover {
+  transform: scale(1.1);
+}
+
+
+.bottom-nav {
+  padding: 0 !important;
+  height: 4em !important;
+  align-items: center; /* vertically center buttons */
+}
+.bottom-nav button {
+  font-size: 1.5em !important; /* increase button text size */
+  line-height: 1; /* ensure no extra height from line spacing */
+}
+
+
+
+}
+
+}
+
+}
+
+}
+
+
+
+
+  .bottom-nav button {
+    margin: 0.5em 0 !important;
+  }
+}
+
+}
+
+}
+
+}
+
+}
+
+
+
+  .bottom-nav button {
+    margin: 0.5em 0 !important;
+  }
+}
+
+
+
+  .bottom-nav button {
+    margin: 0.5em 0 !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1441px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    padding: 0.5em 0 !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-evenly !important;
+    height: auto !important;
+    bottom: 0 !important;
+  }
+  .bottom-nav button {
+    margin: 0.5em 0 !important;
+  }
+}
+
+
+
+.instagram-icon img {
+  width: 28px;
+  height: 28px;
+}
+
+
+.instagram-icon {
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
+  -webkit-mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
+  display: inline-block;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+.instagram-icon:hover {
+  transform: scale(1.1);
+  background-color: red;
+}
+
+
+@media (min-width: 769px) {
+  .bottom-nav {
+    justify-content: space-between !important;
+    padding: 1em 2vw !important;
+  }
+}
+
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+}
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin: 5px auto;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+/* Overlay menu */
+.mobile-menu-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.mobile-menu-overlay ul {
+  list-style: none;
+  padding: 2rem;
+  margin: 0;
+}
+.mobile-menu-overlay li {
+  margin: 1rem 0;
+  text-align: center;
+}
+.mobile-menu-overlay a {
+  text-decoration: none;
+  font-family: 'ArialBlackCustom', Arial Black, Arial, sans-serif;
+  font-size: 1.2rem;
+  color: black;
+}
+
+/* Body class when menu open */
+body.menu-open .mobile-menu-overlay {
+  transform: translateY(0);
+
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+body.menu-open .hamburger span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+body.menu-open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+body.menu-open .hamburger span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Show hamburger on mobile, hide bottom-nav */
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: none !important;
+  }
+  .hamburger {
+    display: block;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 1001;
+    cursor: pointer;
+  }
+}
+
+
+/* Mobile overlay Instagram icon styling */
+.mobile-menu-overlay .instagram-icon {
+  width: 32px;
+  height: 32px;
+  background-color: black;
+  mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
+  -webkit-mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
+  display: inline-block;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+.mobile-menu-overlay .instagram-icon:hover { background-color: red;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .mobile-menu-overlay a {
+    font-size: 2rem !important;
+  }
+}
+
+
+
+}
+
+
+@media (max-width: 768px) {
+  .mobile-menu-overlay ul {
+    align-items: flex-start !important;
+    padding-left: 1rem !important;
+  margin: 0 !important;
+  }
+  .mobile-menu-overlay a {
+    text-align: left !important;
+    width: auto !important;
+  }
+}
+
+
+.mobile-menu-overlay ul li {
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.mobile-menu-overlay a {
+  display: block;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.mobile-menu-link {
+  text-decoration: none;
+  color: black;
+  font-family: 'ArialBlackCustom', 'Arial Black', Arial, sans-serif;
+}
+
+.mobile-menu-link:hover {
+  color: red !important;
+  transform: none !important;
+}
+
+
+@media (max-width: 768px) {
+  .mobile-menu-overlay a:hover {
+    color: red !important;
+    background: none !important;
+  }
+}
+
+
+
+.mobile-menu-link {
+  font-family: 'ArialBlackCustom', 'Arial Black', Arial, sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+}
+.mobile-menu-link:hover {
+  color: red !important;
+}
+
+/* Increase hamburger clickable area */
+.hamburger {
+  width: 50px;
+  height: 50px;
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: fixed;
+    bottom: 1.5em !important;
+    right: 1.5em !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 1001;
+    cursor: pointer;
+  }
+}
+
+
+/* Mobile menu uniform styling */
+@media (max-width: 768px) {
+  .mobile-menu-overlay {
+    top: 0; left: 0; width: 100vw; height: 100vh;
+  }
+  .mobile-menu-overlay ul {
+    list-style: none;
+    padding: 2rem 1rem;
+    margin: 0;
+  }
+  .mobile-menu-overlay li {
+    margin: 0;
+    padding: 0.75rem 0;
+  }
+  .mobile-menu-overlay a {
+    text-decoration: none;
+    font-family: 'ArialBlackCustom', 'Arial Black', Arial, sans-serif;
+    font-size: 2rem;
+    color: black;
+    display: block;
+    width: 100%;
+    text-align: left;
+    transition: color 0.2s ease;
+  }
+  .mobile-menu-overlay a:hover {
+    color: red !important;
+  }
+}
+
+
+.mobile-menu-overlay .instagram-icon {
+  width: 32px;
+  height: 32px;
+  background-color: black;
+  mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
+  -webkit-mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.mobile-menu-overlay .instagram-icon:hover { background-color: red;
+}
+
+
+/* Disable scaling on mobile instagram icon hover */
+.mobile-menu-overlay .instagram-icon:hover {
+  transform: none !important;
+  background-color: red !important;
+}
+
+
+/* Highlight active Portfolio menu item in mobile overlay */
+.mobile-menu-overlay a[href*="portfolio"] {
+  color: red !important;
+}
+
+
+/* Highlight active Portfolio button in desktop nav */
+.bottom-nav button[onclick*="portfolio"] {
+  color: red !important;
+}
+</style>
+</head>
+<body style="margin-top: 0; padding-top: 0;">
+
+
+
+
+
+  <p style="font-family: Courier, monospace; font-size: 1em; line-height: 1.6;">
+    His work has been exhibited in major fashion capitals including Paris, New York, London, and Osaka. Each show emphasizes not just clothes, but concepts—inviting the audience to interact and reflect.
+  </p>
+  <p style="font-family: Courier, monospace; font-size: 1em; line-height: 1.6;">
+    Richard believes the future of design lies in reconnecting with the physical world. Whether through garments, furniture, or digital interfaces, his goal is to provoke thought and restore tactility to modern life.
+  </p>
+
+<model-viewer src="https://richardkauli.github.io/HELLO1.glb" alt="About Model" auto-rotate camera-controls interaction-prompt="none" style="width: 100%; height: 500px; background: #eee;"></model-viewer>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+</div>
+
+<div style="max-width: 1000px; margin: 0 auto 8em auto; padding: 2em 5vw 0 5vw;">
+  
+  <p style="font-family: Courier, monospace; font-size: 1em; line-height: 1.6; margin-top: 2em;">
+    Richard Kauli is a designer and fabricator from Brooklyn, NY whose work explores freedom, surveillance, and physicality in the digital age. Raised in a family that encouraged building and observation, he’s always been drawn to making things by hand.
+  </p>
+  <p style="font-family: Courier, monospace; font-size: 1em; line-height: 1.6;">
+    His fashion label, FREE, merges technical skill with philosophical storytelling, often combining digital fabrication with manual craft. He’s showcased work across multiple continents and continues to build tools and garments that question the systems we live in.
+  </p>
+  <p style="font-family: Courier, monospace; font-size: 1em; line-height: 1.6;">
+    Outside of fashion, Richard experiments with materials like wood and metal, creating functional sculptures that blur the line between product and art. His mission is to make people think through form, texture, and purpose.
+  </p>
+</div>
+<div class="bottom-nav"><button onclick="location.href='../'">RICHARD KAULI</button><button onclick="location.href='../portfolio/'">PORTFOLIO</button><button onclick="location.href='../about/'">ABOUT</button><button onclick="location.href='../contact/'">CONTACT</button><a class="instagram-icon" href="https://www.instagram.com/richard.kauli" target="_blank"></a></div>
+<!-- Mobile Hamburger Menu -->
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="mobile-menu-overlay" id="menuOverlay">
+<ul>
+<li><a href="../index.html">HOME</a></li><li><a href="../portfolio/">PORTFOLIO</a></li>
+<li><a href="../about/">ABOUT</a></li>
+<li><a href="../contact/">CONTACT</a></li>
+<li><a class="mobile-menu-link" href="https://www.instagram.com/richard.kauli" target="_blank"><div class="instagram-icon"></div></a></li>
+</ul>
+</div>
+<script>
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.body.classList.toggle('menu-open');
+});
+</script></body>
+</html>
