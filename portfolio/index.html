@@ -565,9 +565,7 @@ body.menu-open .hamburger span:nth-child(3) {
   color: red !important;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
+
 
 body {
   -ms-overflow-style: none;
@@ -576,7 +574,22 @@ body {
 
 
 html, body {
-  overflow: hidden;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+
+/* Hide scrollbar but keep scroll functionality */
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 </style>
