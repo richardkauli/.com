@@ -614,8 +614,7 @@ body.menu-open .hamburger span:nth-child(3) {
 }
 
 
-.dot.active-dot { background: red !important; border: none !important; }
-.slideshow-container { touch-action: pan-y; }</style>
+.dot.active-dot { background: red !important; border: none !important; }</style>
 </head>
 <body>
 <div class="slideshow-container" style="max-width:800px;margin:0 auto 2em;position:relative;"><div onclick="plusSlides(-1)" style="position:absolute;top:0;left:0;width:50%;height:calc(100% - 60px);z-index:100;cursor:pointer;background:transparent;"></div><div onclick="plusSlides(1)" style="position:absolute;top:0;right:0;width:50%;height:calc(100% - 60px);z-index:100;cursor:pointer;background:transparent;"></div>
@@ -707,34 +706,5 @@ body.menu-open .hamburger span:nth-child(3) {
 document.getElementById('hamburger').addEventListener('click', function() {
   document.body.classList.toggle('menu-open');
 });
-</script><script>
-let startX = 0;
-let endX = 0;
-const threshold = 50;
-
-const slideshow = document.querySelector('.slideshow-container');
-
-if (slideshow) {
-  slideshow.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-    startX = e.touches[0].clientX;
-  }, false);
-
-  slideshow.addEventListener('touchend', function(e) {
-    endX = e.changedTouches[0].clientX;
-    handleSwipe();
-  }, false);
-
-  function handleSwipe() {
-    const diffX = endX - startX;
-    if (Math.abs(diffX) > threshold) {
-      if (diffX > 0) {
-        plusSlides(-1);
-      } else {
-        plusSlides(1);
-      }
-    }
-  }
-}
 </script></body>
 </html>
