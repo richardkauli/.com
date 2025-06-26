@@ -2,709 +2,212 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><link href="https://richardkauli.github.io/favicon.png" rel="icon" type="image/png"/>
-<script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" type="module"></script>
+<head>
 <meta charset="utf-8"/>
-<title>Richard Kauli - Portfolio</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Richard Kauli</title>
+<script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" type="module"></script>
 <style>
-@font-face {
-  font-family: 'ArialBlackCustom';
-  src: url('../arial_black.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
-
-
-
-
-
-    * {
-      box-sizing: border-box;
+    @font-face {
+      font-family: 'ArialBlackCustom';
+      src: url('https://richardkauli.github.io/arial_black.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
     }
 
-    body {
+    html, body {
       margin: 0;
-      font-family: Courier, monospace;
-      background-color: white;
-    }
-
-    .product-grid {
-      display: grid;
-      gap: 2vw;
-      padding: 4vw;
-      justify-items: center;
-    
-  padding-bottom: 100px; }
-
-    .product {
-      width: 90%;
-      max-width: 500px;
-    }
-
-    .model-container {
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
       width: 100%;
-      aspect-ratio: 1 / 1;
+      background: url('https://richardkauli.github.io/Untitled-25.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #000;
+    }
+
+    .container {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+
+    .button-panel div:hover {
+      color: red;
+      cursor: pointer;
+    }
+
+    .instagram-icon img {
+      width: 24px;
+      height: 24px;
     }
 
     model-viewer {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      background-color: #eee;
-      display: block;
+      max-height: 100%;
+      --poster-color: transparent;
     }
 
-    .title {
-      font-weight: bold;
-      font-size: 1.2em;
-      margin-top: 0.5em;
-      text-align: left;
+    ::-webkit-scrollbar {
+      display: none;
     }
 
-    .description {
-      font-size: 1em;
-      margin-top: 0.5em;
-      text-align: left;
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
 
-    .read-more {
-  font-size: 1em;
-  color: black;
-  text-decoration: none;
-  margin: 0.5em 0 0 0;
-  padding: 0;
-  display: inline-block;
-  text-align: left;
-  font-family: Courier, monospace;
-}
-
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: white;
-      display: flex;
-      justify-content: space-around;
-      padding: 1.5em 0;
-    }
-
-    .bottom-nav button {
-      font-family: Arial Black, Arial, sans-serif;
-      background: none;
-      border: none;
-      font-size: 1.2em;
-      cursor: pointer;
-    }
-
-    
-
-
-}
-
-}
-
-}
-
-}
-
-}
-
-    }
-
-    @media screen and (max-width: 600px) {
-      .product {
-        width: 90vw;
-        margin: 0 auto;
+    @media (min-width: 769px) {
+      .container {
+        display: flex;
+        flex-direction: column;
       }
 
-      .bottom-nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5em;
+      
       }
     }
   
-.bottom-nav button:hover,
-
-
-
-
-
-
-.bottom-menu:hover {
-  color: red !important;
-  background-color: transparent !important;
+.button-panel a {
+  transition: transform 0.2s ease;
 }
-
-
-.bottom-nav button:hover {
-  color: red !important;
-  background-color: transparent !important;
-}
-
-
-.bottom-nav button {
-  padding: 0;
-  margin: 0;
-  outline: none;
-  transition: color 0.3s ease;
-}
-.bottom-nav button:hover {
-  color: red !important;
-  background: none !important;
-  padding: 0;
-  margin: 0;
-}
-
-
-
-.project-button {
-  all: unset;
-  cursor: pointer;
-  font-family: Courier, monospace;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: left;
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0.5em 0 0.25em 0;
-  box-sizing: border-box;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.project-button:hover {
-  color: darkgrey !important;
-  background: none !important;
-}
-
-
-
-.read-more:hover {
-  background-color: red;
-  color: white;
-}
-
-
-.bottom-nav button {
-  transition: transform 0.2s ease, color 0.3s ease;
-}
-.bottom-nav button:hover {
+.button-panel a:hover {
   transform: scale(1.1);
 }
 
-
-.bottom-nav {
-  padding: 0 !important;
-  height: 4em !important;
-  align-items: center; /* vertically center buttons */
-}
-.bottom-nav button {
-  font-size: 1.5em !important; /* increase button text size */
-  line-height: 1; /* ensure no extra height from line spacing */
-}
-
-
-
-}
-
-}
-
-}
-
-}
-
-
-
-
-  .bottom-nav button {
-    margin: 0.5em 0 !important;
-  }
-}
-
-}
-
-}
-
-}
-
-}
-
-
-
-  .bottom-nav button {
-    margin: 0.5em 0 !important;
-  }
-}
-
-
-
-  .bottom-nav button {
-    margin: 0.5em 0 !important;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 1441px) {
-  .product-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-
-@media (max-width: 768px) {
-  .bottom-nav {
-    padding: 0.5em 0 !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: space-evenly !important;
-    height: auto !important;
-    bottom: 0 !important;
-  }
-  .bottom-nav button {
-    margin: 0.5em 0 !important;
-  }
-}
-
-
-
-.instagram-icon img {
-  width: 28px;
-  height: 28px;
-}
 
 
 .instagram-icon {
-  width: 24px;
-  height: 24px;
-  background-color: black;
+  width: 28px;
+  height: 28px;
+  background-color: #000;
   mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
   -webkit-mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
   display: inline-block;
-  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 .instagram-icon:hover {
-  transform: scale(1.1);
   background-color: red;
 }
 
 
-@media (min-width: 769px) {
-  .bottom-nav {
-    justify-content: space-between !important;
-    padding: 1em 2vw !important;
-  }
+/* Top two-thirds for 3D model */
+
+}
+/* Bottom one-third for buttons */
+
+/* Scale button text based on bottom panel height */
+.button-panel div, .button-panel a {
+  font-size:  5vh !important;
+}
+/* Instagram icon scales with text */
+.button-panel .instagram-icon {
+  width: 0.9em !important;
+  height: 0.9em !important;
 }
 
 
-/* Hamburger styles */
-.hamburger {
-  display: none;
-}
-.hamburger span {
-  display: block;
-  width: 30px;
-  height: 4px;
-  margin: 5px auto;
-  background-color: black;
-  transition: all 0.3s ease;
+/* Force smaller button text to prevent clipping */
+.button-panel div, .button-panel a {
+  font-size:  5vh !important;
+  line-height: 1 !important;
 }
 
-/* Overlay menu */
-.mobile-menu-overlay {
+
+/* Enforce 3D model top 70% of viewport at all sizes */
+.hero, .model-panel {
+  height: 70vh !important;
+}
+model-viewer {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* Button panel bottom 30% */
+
+
+
+/* Button panel styling reset */
+.button-panel {
+  padding-bottom: 1rem !important;
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
-  background-color: white;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  z-index: 1000;
-
-  top: 0;
-  left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 30vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:  0.3rem !important;
+  font-family: 'ArialBlackCustom', Arial, sans-serif;
+  color: #000;
+  z-index: 10;
 }
-.mobile-menu-overlay ul {
-  list-style: none;
-  padding: 2rem;
+/* Scale text */
+.button-panel div, .button-panel a {
+  font-size:  5vh !important;
+  text-decoration: none;
   margin: 0;
+  padding: 0;
+  line-height: 1;
 }
-.mobile-menu-overlay li {
-  margin: 1rem 0;
-  text-align: center;
-}
-.mobile-menu-overlay a {
-  text-decoration: none;
-  font-family: 'ArialBlackCustom', Arial Black, Arial, sans-serif;
-  font-size: 1.2rem;
-  color: black;
-}
-
-/* Body class when menu open */
-body.menu-open .mobile-menu-overlay {
-  transform: translateY(0);
-
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-body.menu-open .hamburger span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-body.menu-open .hamburger span:nth-child(2) {
-  opacity: 0;
-}
-body.menu-open .hamburger span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
-
-/* Show hamburger on mobile, hide bottom-nav */
-@media (max-width: 768px) {
-  .bottom-nav {
-    display: none !important;
-  }
-  .hamburger {
-    display: block;
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
-    z-index: 1001;
-    cursor: pointer;
-  }
+/* Instagram icon styling */
+.button-panel .instagram-icon {
+  width: 0.9em !important;
+  height: 0.9em !important;
+  margin-top: 0;
 }
 
 
-/* Mobile overlay Instagram icon styling */
-.mobile-menu-overlay .instagram-icon {
-  width: 32px;
-  height: 32px;
-  background-color: black;
-  mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
-  -webkit-mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
-  display: inline-block;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-.mobile-menu-overlay .instagram-icon:hover { background-color: red;
-}
-
-
-
-
-@media (max-width: 768px) {
-  .mobile-menu-overlay a {
-    font-size: 2rem !important;
-  }
-}
-
-
-
-}
-
-
-@media (max-width: 768px) {
-  .mobile-menu-overlay ul {
-    align-items: flex-start !important;
-    padding-left: 1rem !important;
-  margin: 0 !important;
-  }
-  .mobile-menu-overlay a {
-    text-align: left !important;
-    width: auto !important;
-  }
-}
-
-
-.mobile-menu-overlay ul li {
-  width: 100%;
-  margin: 0;
-  padding: 0.5rem 0;
-}
-
-.mobile-menu-overlay a {
-  display: block;
-  padding-left: 1rem;
-  text-align: left;
-}
-
-.mobile-menu-link {
-  text-decoration: none;
-  color: black;
-  font-family: 'ArialBlackCustom', 'Arial Black', Arial, sans-serif;
-}
-
-.mobile-menu-link:hover {
+/* Hover effect: buttons turn red */
+.button-panel div:hover,
+.button-panel a:hover {
   color: red !important;
-  transform: none !important;
-}
-
-
-@media (max-width: 768px) {
-  .mobile-menu-overlay a:hover {
-    color: red !important;
-    background: none !important;
-  }
-}
-
-
-
-.mobile-menu-link {
-  font-family: 'ArialBlackCustom', 'Arial Black', Arial, sans-serif;
-  font-size: 2rem;
-  text-decoration: none;
-  color: black;
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 0.5rem 1rem;
-}
-.mobile-menu-link:hover {
-  color: red !important;
-}
-
-/* Increase hamburger clickable area */
-.hamburger {
-  width: 50px;
-  height: 50px;
-}
-
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    position: fixed;
-    bottom: 1.5em !important;
-    right: 1.5em !important;
-    width: 40px !important;
-    height: 40px !important;
-    z-index: 1001;
-    cursor: pointer;
-  }
-}
-
-
-/* Mobile menu uniform styling */
-@media (max-width: 768px) {
-  .mobile-menu-overlay {
-    top: 0; left: 0; width: 100vw; height: 100vh;
-  }
-  .mobile-menu-overlay ul {
-    list-style: none;
-    padding: 2rem 1rem;
-    margin: 0;
-  }
-  .mobile-menu-overlay li {
-    margin: 0;
-    padding: 0.75rem 0;
-  }
-  .mobile-menu-overlay a {
-    text-decoration: none;
-    font-family: 'ArialBlackCustom', 'Arial Black', Arial, sans-serif;
-    font-size: 2rem;
-    color: black;
-    display: block;
-    width: 100%;
-    text-align: left;
-    transition: color 0.2s ease;
-  }
-  .mobile-menu-overlay a:hover {
-    color: red !important;
-  }
-}
-
-
-.mobile-menu-overlay .instagram-icon {
-  width: 32px;
-  height: 32px;
-  background-color: black;
-  mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
-  -webkit-mask: url('https://richardkauli.github.io/IG_LOGO.png') no-repeat center / contain;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-.mobile-menu-overlay .instagram-icon:hover { background-color: red;
-}
-
-
-/* Disable scaling on mobile instagram icon hover */
-.mobile-menu-overlay .instagram-icon:hover {
-  transform: none !important;
-  background-color: red !important;
-}
-
-
-/* Highlight active Portfolio menu item in mobile overlay */
-.mobile-menu-overlay a[href*="about"] {
-  color: red !important;
-}
-
-
-/* Highlight active Portfolio button in desktop nav */
-.bottom-nav button[onclick*="about"] {
-  color: red !important;
-}
-
-    /* Slightly more space after titles */
-    .about-structured p strong {
-      display: block;
-      margin-bottom: 0.75em;
-    }
-
-    .about-structured a.project-link { color: black; text-decoration: none; display: inline-block; width: 100%; line-height: 1.6; }
-    .about-structured a.project-link:hover { color: white; background-color: red; }
-
-.about-structured a.project-link { text-decoration: none; }
-.about-structured a.project-link:hover {
-  text-decoration: underline;
-  text-decoration-color: white;
-  color: white;
-  background-color: red;
 }
 </style>
+<link href="https://richardkauli.github.io/favicon.png" rel="icon" type="image/webp"/>
+
+
+
+
+
 
 <style>
-/* Fully hide scrollbars across all modern browsers */
-html, body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari */
-}
-
-    .about-structured a.project-link { color: black; text-decoration: none; display: inline-block; width: 100%; line-height: 1.6; }
-    .about-structured a.project-link:hover { color: white; background-color: red; }
-
-.about-structured a.project-link { text-decoration: none; }
-.about-structured a.project-link:hover {
-  text-decoration: underline;
-  text-decoration-color: white;
-  color: white;
-  background-color: red;
+@media (max-width: 768px) {
+  .button-panel {
+    padding-top: 14vh !important;
+  }
 }
 </style>
 
 </head>
-<body style="margin-top: 0; padding-top: 0;">
-
-
-
-
+<body>
+<div class="container">
+<div class="model-panel">
+<model-viewer alt="Hello Model" auto-rotate="" auto-rotate-delay="0" autoplay="" camera-controls="" camera-orbit="0deg 90deg 70%" field-of-view="20deg" id="viewer" interaction-prompt="none" rotation-per-second="45deg" src="https://richardkauli.github.io/HELLO1.glb">
+</model-viewer>
 </div>
-
-
-
+<div class="button-panel">
+<a href="portfolio/" style="text-decoration: none; color: inherit;"><div>PORTFOLIO</div></a>
+<a href="about/" style="text-decoration: none; color: inherit;"><div>ABOUT</div></a>
+<a href="contact/" style="text-decoration: none; color: inherit;"><div>CONTACT</div></a>
+<a class="instagram-icon" href="https://www.instagram.com/richard.kauli" target="_blank"></a>
 </div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-</div>
-
-
-
-  <div class="about-structured" style="max-width: 1000px; margin: 0 auto 12em auto; padding: 0 5vw; font-family: Courier, monospace; font-size: 1em; line-height: 1.6;">
-    <p><strong>Education:</strong>
-      2023 - 2025 AAS in Fashion Business Management, Fashion Institute of Technology, New York, NY<br>
-      EXPECTED 2027 BFA in Fashion Business Management, Fashion Institute of Technology, New York, NY
-    </p>
-
-    <p><strong>Group Projects:</strong>
-  <a href="https://2022-artshow.freeinquotes.com/" class="project-link" target="_blank">2022 Jul ARE YOU REALLY FREE - Fashion and Web3 Pop-Up, New York, NY</a>
-  2022 Nov Piece Unik - Fashion Experience and Auction, Los Angeles, CA
-  <a href="https://www.youtube.com/watch?v=ADoRabr_ZRU" class="project-link" target="_blank">2023 Nov UNDER TRACKS_ - Short film, Osaka, Japan</a>
-  <a href="about/2023DecParkMart" class="project-link" target="_blank">2023 Dec ParkMart - Fashion Pop-Up, Brooklyn, NY</a>
-  <a href="#" class="project-link">2024 Sep Piece Unik - Fashion Experience and Auction, New York, NY</a>
-<div style="margin-top:1em;"></div>
-<strong>Selected Fashion Shows:</strong>
-<div style="margin-bottom:1em;"></div>
-  <a href="#" class="project-link">2023 Apr ZEUS - BORN TO BE SS23 Collection, Brooklyn, NY</a>
-  <a href="#" class="project-link">2023 Apr Fashion Week Brooklyn - BORN TO BE SS23 Collection, Brooklyn, NY</a>
-  <a href="#" class="project-link">2023 Apr ZEUS - BORN TO BE SS23 Collection, Brooklyn, NY</a>
-  <a href="#" class="project-link">2023 Aug Japan Village - CENSORED FW23 Collection, Brooklyn, NY</a>
-  <a href="#" class="project-link">2023 Sep TOSH - CENSORED FW23 Collection, New York, NY</a>
-  <a href="#" class="project-link">2023 Oct Fashion Week Brooklyn - CENSORED FW23 Collection, Brooklyn, NY</a>
-  <a href="#" class="project-link">2024 Feb Fashion Week Brooklyn - EYE SEE YOU SS24 Collection, London, United Kingdom</a>
-  <a href="#" class="project-link">2024 Feb Fashion Week Brooklyn - EYE SEE YOU SS24 Collection, Paris, France</a>
-  <a href="#" class="project-link">2024 Apr Fashion Week Brooklyn - EYE SEE YOU SS24 Collection, Brooklyn, NY</a>
-  <a href="#" class="project-link">2024 Oct FWBK - Showcasing FREEDOM Collection, Brooklyn, NY</a>
-  <a href="#" class="project-link">2024 Nov Runway 27 - Fashion Institute of Technology, New York, NY</a>
-<p><strong>Honors/Awards:</strong>
-      2022    Scholastic Gold Key Award for photography<br>
-      2022    Scholastic Silver Key Award for photography
-    </p>
-
-    <p><strong>Employment:</strong>
-      2021 - 2024    Lifeguard for American Pool, Greater NYC Region<br>
-      2022            Studio Intern for _by.Alexander, New York, NY<br>
-      <a href="https://freeinquotes.com" class="project-link" target="_blank">2022 - 2025 Founder of “FREE”, Brooklyn, NY</a>
-    </p>
-
-    <p><strong>Technical Skills:</strong>
-      Adobe Creative Suite: Illustrator, Photoshop, Lightroom, Premiere Pro, After Effects, InDesign<br>
-      Web Design & Coding: HTML, CSS, Javascript, Github, Vercel<br>
-      3D Modeling: CLO 3D, Blender, AutoCAD, SketchUp<br>
-      Marketing & Analytics: Shopify, Meta Ads, Google Ads, TikTok Ads, Google Analytics, Excel
-    </p>
-  </div>
-
-
-<div class="bottom-nav"><button onclick="location.href='../me'">RICHARD KAULI</button><button onclick="location.href='../portfolio/'">PORTFOLIO</button><button onclick="location.href='../about/'">ABOUT</button><button onclick="location.href='../contact/'">CONTACT</button><a class="instagram-icon" href="https://www.instagram.com/richard.kauli" target="_blank"></a></div>
-<!-- Mobile Hamburger Menu -->
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
-<div class="mobile-menu-overlay" id="menuOverlay">
-<ul>
-<li><a href="../me">RICHARD KAULI</a></li><li><a href="../portfolio/">PORTFOLIO</a></li>
-<li><a href="../about/">ABOUT</a></li>
-<li><a href="../contact/">CONTACT</a></li>
-<li><a class="mobile-menu-link" href="https://www.instagram.com/richard.kauli" target="_blank"><div class="instagram-icon"></div></a></li>
-</ul>
 </div>
 <script>
-document.getElementById('hamburger').addEventListener('click', function() {
-  document.body.classList.toggle('menu-open');
-});
-</script></body>
+    const viewer = document.getElementById('viewer');
+    
+    if (window.innerWidth <= 768) {
+      viewer.setAttribute('camera-orbit', '0deg 90deg 110%');
+    }
+  </script>
+</body>
 </html>
