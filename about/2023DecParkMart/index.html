@@ -8,6 +8,24 @@
 <title>Richard Kauli - Portfolio</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <style>
+.bottom-nav button {
+  font-family: 'ArialBlackCustom', Arial Black, Arial, sans-serif;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0.5em 0;
+  color: black;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.bottom-nav button:hover {
+  color: red !important;
+  background: none !important;
+  transform: scale(1.1);
+}
+
 
 @font-face {
   font-family: 'DDIN';
@@ -112,13 +130,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
       padding: 1.5em 0;
     }
 
-    .bottom-nav button {
-      font-family: Arial Black, Arial, sans-serif;
-      background: none;
-      border: none;
-      font-size: 1.2em;
-      cursor: pointer;
-    }
+    
 
     
 
@@ -161,24 +173,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 
-.bottom-nav button:hover {
-  color: red !important;
-  background-color: transparent !important;
-}
 
 
-.bottom-nav button {
-  padding: 0;
-  margin: 0;
-  outline: none;
-  transition: color 0.3s ease;
-}
-.bottom-nav button:hover {
-  color: red !important;
-  background: none !important;
-  padding: 0;
-  margin: 0;
-}
+
+
+
 
 
 
@@ -210,12 +209,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 
-.bottom-nav button {
-  transition: transform 0.2s ease, color 0.3s ease;
-}
-.bottom-nav button:hover {
-  transform: scale(1.1);
-}
+
+
 
 
 .bottom-nav {
@@ -223,10 +218,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   height: 4em !important;
   align-items: center; /* vertically center buttons */
 }
-.bottom-nav button {
-  font-size: 1.5em !important; /* increase button text size */
-  line-height: 1; /* ensure no extra height from line spacing */
-}
+
 
 
 
@@ -241,9 +233,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 
-  .bottom-nav button {
-    margin: 0.5em 0 !important;
-  }
+  
 }
 
 }
@@ -256,16 +246,12 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 
-  .bottom-nav button {
-    margin: 0.5em 0 !important;
-  }
+  
 }
 
 
 
-  .bottom-nav button {
-    margin: 0.5em 0 !important;
-  }
+  
 }
 
 
@@ -300,9 +286,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     height: auto !important;
     bottom: 0 !important;
   }
-  .bottom-nav button {
-    margin: 0.5em 0 !important;
-  }
+  
 }
 
 
@@ -614,59 +598,35 @@ body.menu-open .hamburger span:nth-child(3) {
 }
 
 
-.dot.active-dot { background: red !important; border: none !important; }</style>
+.dot.active-dot { background: red !important; border: none !important; }
+.bottom-nav {
+  z-index: 2001 !important;
+  position: fixed !important;
+}
+.bottom-nav button, .bottom-nav a {
+  z-index: 2002 !important;
+  position: relative;
+}
+
+@media (min-width: 769px) {
+  .slides {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}
+
+</style>
 </head>
 <body>
-<div class="slideshow-container" style="max-width:800px;margin:0 auto 2em;position:relative;"><img alt="Slide 1" class="slides" src="https://freeinquotes.com/cdn/shop/files/A0552C86-CFD0-4217-86E6-1EE2FB2EC041.jpg?v=1695689052&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 2" class="slides" src="https://freeinquotes.com/cdn/shop/files/762481DA-2048-4EC7-A14A-E782465521A7.jpg?v=1697578192&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 3" class="slides" src="https://freeinquotes.com/cdn/shop/files/D4F9FC73-16E5-42C6-A772-DA57313828F9.jpg?v=1697578428&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 4" class="slides" src="https://freeinquotes.com/cdn/shop/files/D768587A-6897-4E47-BE02-AE20629BDFCB.jpg?v=1697578429&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 5" class="slides" src="https://freeinquotes.com/cdn/shop/files/89D3048D-BE2B-4A0C-9B0A-0158217366AC.jpg?v=1697578427&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 6" class="slides" src="https://freeinquotes.com/cdn/shop/files/REK01173.jpg?v=1723770637&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 7" class="slides" src="https://freeinquotes.com/cdn/shop/files/A0552C86-CFD0-4217-86E6-1EE2FB2EC041.jpg?v=1695689052&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 8" class="slides" src="https://freeinquotes.com/cdn/shop/files/762481DA-2048-4EC7-A14A-E782465521A7.jpg?v=1697578192&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 9" class="slides" src="https://freeinquotes.com/cdn/shop/files/D4F9FC73-16E5-42C6-A772-DA57313828F9.jpg?v=1697578428&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 10" class="slides" src="https://freeinquotes.com/cdn/shop/files/D768587A-6897-4E47-BE02-AE20629BDFCB.jpg?v=1697578429&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 11" class="slides" src="https://freeinquotes.com/cdn/shop/files/89D3048D-BE2B-4A0C-9B0A-0158217366AC.jpg?v=1697578427&amp;width=1646" style="width:100%;display:none;"/><img alt="Slide 12" class="slides" src="https://freeinquotes.com/cdn/shop/files/REK01173.jpg?v=1723770637&amp;width=1646" style="width:100%;display:none;"/><div onclick="plusSlides(-1)" style="position:absolute;top:0;left:0;width:50%;height:calc(100% - 60px);z-index:100;cursor:pointer;background:transparent;"></div><div onclick="plusSlides(1)" style="position:absolute;top:0;right:0;width:50%;height:calc(100% - 60px);z-index:100;cursor:pointer;background:transparent;"></div>
-<div style="text-align:center;display:flex;justify-content:center;align-items:center;gap:1em;margin:0.25em 0;"><span onclick="plusSlides(-1)" style="font-size:1.5em;cursor:pointer;margin-right:0.25em;color:black;display:inline-block;">←</span><span class="dot" onclick="currentSlide(1)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(2)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(3)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(4)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(5)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(6)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(7)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(8)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(9)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(10)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(11)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(12)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span onclick="plusSlides(1)" style="font-size:1.5em;cursor:pointer;margin-left:0.25em;color:black;display:inline-block;">→</span></div>
+<div class="slideshow-container" style="max-width:800px;margin:0 auto 2em;position:relative;"><img alt="Slide 1" class="slides" src="1.jpg" style="width:100%;display:none;"/><img alt="Slide 2" class="slides" src="2.jpg" style="width:100%;display:none;"/><img alt="Slide 3" class="slides" src="3.jpg" style="width:100%;display:none;"/><img alt="Slide 4" class="slides" src="4.jpg" style="width:100%;display:none;"/><img alt="Slide 5" class="slides" src="5.jpg" style="width:100%;display:none;"/><img alt="Slide 6" class="slides" src="6.jpg" style="width:100%;display:none;"/><img alt="Slide 7" class="slides" src="7.jpg" style="width:100%;display:none;"/><div onclick="plusSlides(-1)" style="position:absolute;top:0;left:0;width:50%;height:calc(100% - 60px);z-index:100;cursor:pointer;background:transparent;"></div><div onclick="plusSlides(1)" style="position:absolute;top:0;right:0;width:50%;height:calc(100% - 60px);z-index:100;cursor:pointer;background:transparent;"></div>
+<div style="text-align:center;display:flex;justify-content:center;align-items:center;gap:1em;margin:0.25em 0;"><span onclick="plusSlides(-1)" style="font-size:1.5em;cursor:pointer;margin-right:0.25em;color:black;display:inline-block;">←</span><span class="dot" onclick="currentSlide(1)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(2)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(3)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(4)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(5)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(6)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span class="dot" onclick="currentSlide(7)" style="height:12px;width:12px;margin:0 4px;background:white;border:1px solid black;border-radius:50%;display:inline-block;cursor:pointer;"></span><span onclick="plusSlides(1)" style="font-size:1.5em;cursor:pointer;margin-left:0.25em;color:black;display:inline-block;">→</span></div>
 </div>
 <!-- Product Description -->
 <div class="product-description" style="max-width:800px;margin:0 auto 2em;padding:0 1em;line-height:1.6;">
 <p style="font-family:Courier, monospace; font-size:1em; text-decoration:underline; cursor:pointer; color:black; margin:0.25em 0;">
-<h1 style="font-family:Courier, monospace; font-size: 2em; margin:0.1em 0 1em 0; font-family:'ArialBlackCustom', Arial Black, Arial, sans-serif, Courier, monospace;">PROJECT 1</h1>
-<span id="toggleModel">View 3D Model</span>
-</p>
-<p>The Aurora Lens is a revolutionary augmented reality eyewear that seamlessly blends virtual enhancements with your real-world environment. Designed with a lightweight carbon fiber frame and scratch-resistant lenses, it offers unparalleled clarity and comfort for all-day use.</p>
-<p>Equipped with built-in gesture controls and voice activation, the Aurora Lens allows hands-free navigation through apps, notifications, and immersive experiences. Its dual-core processor ensures smooth performance, while the adjustable interface tailors information based on your preferences and surroundings.</p>
-<p>From real-time translation of foreign text to overlaying helpful tutorials during DIY projects, the Aurora Lens transforms how you interact with your world. The device’s long-lasting battery and fast-charging capabilities mean you spend less time plugged in and more time exploring.</p>
-<p>Whether you’re a creative professional seeking enhanced design visualization or an adventurer capturing memories in new dimensions, the Aurora Lens empowers you to see beyond the ordinary. Discover a new perspective today and elevate your reality.</p>
-<p>3000 USD</p>
-<p style="padding-bottom:1em;"><a href="mailto:contact@richardkauli.com" id="contactEmail">contact@richardkauli.com</a></p>
-</div>
+<h1 style="font-family:Courier, monospace; font-size: 2em; margin:0.1em 0 0.2em 0; font-family:'ArialBlackCustom', Arial Black, Arial, sans-serif, Courier, monospace; text-align: center;">Park Mart December 2023</h1></div>
 <!-- 3D Model Viewer -->
-<div id="modelOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); z-index:2000; justify-content:center; align-items:center;">
-<button id="closeOverlay" style="
-      position:absolute;
-      top:1em;
-      right:1em;
-      font-size:3em;
-      background:transparent;
-      border:none;
-      color:black;
-      cursor:pointer;
-      z-index:2001;">
-      ✕
-    </button>
-<model-viewer alt="3D Model" auto-rotate="" camera-controls="" src="https://richardkauli.github.io/HELLO1.glb" style="width:100vw; height:100vh; background:#eee;"></model-viewer>
-</div>
-<script>
-    const btn = document.getElementById('toggleModel');
-    const overlay = document.getElementById('modelOverlay');
-    let open = false;
-    btn.addEventListener('click', () => {
-      open = !open;
-      overlay.style.display = open ? 'flex' : 'none';
-      btn.textContent = open ? 'Close 3D Model' : 'View 3D Model';
-    });
-  
-    // Close overlay button listener
-    const closeBtn = document.getElementById('closeOverlay');
-    closeBtn.addEventListener('click', () => {
-      open = false;
-      overlay.style.display = 'none';
-      btn.textContent = 'View 3D Model';
-    });
-</script>
+
 <!-- Slideshow Script -->
 <script>
     let slideIndex = 1; showSlides(slideIndex);
@@ -681,8 +641,13 @@ body.menu-open .hamburger span:nth-child(3) {
     }
   </script>
 <div style="height:4em;"></div>
-<div class="bottom-nav"><button onclick="location.href='../'">RICHARD KAULI</button><button onclick="location.href='../portfolio/'">PORTFOLIO</button><button onclick="location.href='../about/'">ABOUT</button><button onclick="location.href='../contact/'">CONTACT</button><a class="instagram-icon" href="https://www.instagram.com/richard.kauli" target="_blank"></a></div>
-<!-- Mobile Hamburger Menu -->
+<div class="bottom-nav">
+<button onclick="location.href='https://www.richardkauli.com/me'">RICHARD KAULI</button>
+<button onclick="location.href='https://www.richardkauli.com/portfolio'">PORTFOLIO</button>
+<button onclick="location.href='https://www.richardkauli.com/about'">ABOUT</button>
+<button onclick="location.href='https://www.richardkauli.com/contact'">CONTACT</button>
+<a class="instagram-icon" href="https://www.instagram.com/richard.kauli" target="_blank"></a>
+</div>
 <div class="hamburger" id="hamburger">
 <span></span>
 <span></span>
