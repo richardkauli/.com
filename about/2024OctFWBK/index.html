@@ -713,5 +713,21 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('hamburger').addEventListener('click', function() {
   document.body.classList.toggle('menu-open');
 });
-</script></body>
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.slideshow-container');
+  if (!container) return;
+  const imgs = container.querySelectorAll('img');
+  if (imgs.length > 1) {
+    imgs[0].addEventListener('load', function() {
+      for (let i = 1; i < imgs.length; i++) {
+        const preload = new Image();
+        preload.src = imgs[i].src;
+      }
+    }, { once: true });
+  }
+});
+</script>
+</body>
 </html>
